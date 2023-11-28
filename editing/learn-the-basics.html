@@ -136,7 +136,7 @@
             <text>Now that you've cloned the <highlight>Dummy Wiki</highlight>, you can now open <highlight>Visual Studio Code</highlight>, and press <highlight>CTRL + SHIFT + `</highlight> to open up a new terminal and type in the following commands:</text><br><br>
             
 			<div class="container">
-				<text style="white-space: pre;">
+				<text style="white-space: pre-wrap;">
 					git config --global user.name "YourGithubName"
 					git config --global user.email "youremail@example.com"
 					git clone https://github.com/[your_githubname]/dummy.git . && git pull
@@ -146,7 +146,7 @@
             <text>Before we start editing, we must install 2 pip libraries before we run <highlight type="rainbow">main.py</highlight> type the following command on the terminal:<br><br>
 
 			<div class="container">
-				<text style="white-space: pre;">
+				<text style="white-space: pre-wrap;">
 					pip install fastapi uvicorn
 				</text>
 			</div><br>
@@ -154,7 +154,7 @@
             <text>Now that you have those two pip libraries installed, you can now run <highlight type="rainbow">main.py</highlight> by typing the following command on the terminal:</text><br><br>
             
 			<div class="container">
-				<text style="white-space: pre;">
+				<text style="white-space: pre-wrap;">
 					python main.py
 				</text>
 			</div><br>
@@ -162,7 +162,7 @@
 			<text>For <highlight>Linux</highlight> computers:</text><br><br>
 
 			<div class="container">
-				<text style="white-space: pre;">
+				<text style="white-space: pre-wrap;">
 					python3 main.py
 				</text>
 			</div><br>
@@ -170,24 +170,24 @@
 			<text>Alright... now that everything is almost setup, we can actually start editing!!</text>
         </div>
 
-        <div style="margin-bottom: 30px;" id="editing">
-            <text style="font-size: 20px;">Now, the Editing part!! <highlight style="font-size: 10px;">#editing-1</highlight></text><br>
+        <div style="margin-bottom: 30px;" id="editing-text">
+            <text style="font-size: 20px;">Now, the Editing part!! <highlight style="font-size: 10px;">#editing-text</highlight></text><br>
             <text>To start editing, let's open up a file we want. For example, let's open up <highlight>home.html</highlight>. and edit our first <highlight>Text Element</highlight>.</text><br><br>
 
 			<div class="container">
-				<text style="white-space: pre;">
+				<text style="white-space: pre-wrap;">
 					&lt;div style="margin-bottom: 20px;"&gt;
 					&Tab;&Tab;&lt;text style="font-size: 30px;"&gt;Title&lt;/text&gt;&lt;br&gt;
 					&Tab;&Tab;&lt;text&gt;Description&lt;/text&gt;
 					&lt;/div&gt;
 				</text>
-			</div><br><br>
+			</div><br>
 
 			<text>Let's try editing the Page's Title to something else, try changing it from "Title" to anything you want from the <highlight>home.html</highlight> file, then visit this localhost page <a href="http://localhost/dummy">http://localhost/dummy</a> to see if the text changed to something else!</text><br><br>
 			<text>You can also edit the font size style to something else, like <highlight>50px</highlight>, or <highlight>69%</highlight>!</text><br><br>
 			
 			<div class="container">
-				<text style="white-space: pre;">
+				<text style="white-space: pre-wrap;">
 					&lt;div style="margin-bottom: 20px;"&gt;
 					&Tab;&Tab;&lt;text <highlight>style="font-size: 50px;"</highlight>&gt;Title&lt;/text&gt;&lt;br&gt;
 					&Tab;&Tab;&lt;text&gt;Description&lt;/text&gt;
@@ -196,18 +196,18 @@
 			</div><br>
 
 			<div class="container">
-				<text style="white-space: pre;">
+				<text style="white-space: pre-wrap;">
 					&lt;div style="margin-bottom: 20px;"&gt;
 					&Tab;&Tab;&lt;text <highlight>style="font-size: 69%;"</highlight>&gt;Title&lt;/text&gt;&lt;br&gt;
 					&Tab;&Tab;&lt;text&gt;Description&lt;/text&gt;
 					&lt;/div&gt;
 				</text>
-			</div><br><br>
+			</div><br>
 
 			<text>You can also change it's color to something else, the color value can be <highlight type="rainbow">Hex Values ( #696969 )</highlight>, <highlight type="rainbow">RGB ( rgb(69, 69, 69) )</highlight> and more!</text><br><br>
 
 			<div class="container">
-				<text style="white-space: pre;">
+				<text style="white-space: pre-wrap;">
 					&lt;div style="margin-bottom: 20px;"&gt;
 					&Tab;&Tab;&lt;text style="<highlight>color: #696969;</highlight> font-size: 69%;"&gt;Title&lt;/text&gt;&lt;br&gt;
 					&Tab;&Tab;&lt;text&gt;Description&lt;/text&gt;
@@ -216,16 +216,81 @@
 			</div><br>
 
 			<div class="container">
-				<text style="white-space: pre;">
+				<text style="white-space: pre-wrap;">
 					&lt;div style="margin-bottom: 20px;"&gt;
 					&Tab;&Tab;&lt;text style="<highlight>color: rgb(69, 69, 69);</highlight> font-size: 69%;"&gt;Title&lt;/text&gt;&lt;br&gt;
 					&Tab;&Tab;&lt;text&gt;Description&lt;/text&gt;
 					&lt;/div&gt;
 				</text>
-			</div><br><br>
+			</div><br>
 
 			<text>You can change the description to anything you want too!</text><br><br>
-			<text>Oh yeah, when editing the style value, it's very important that you don't forget <highlight>" : " (colon)</highlight> after every property name and <highlight>" ; " (semicolon)</highlight> after a property value. Forgetting to put that may cause the Text Element's style to not display properly.</text><br><br>
+			<text>Oh yeah, when editing the style value, it's very important that you don't forget <highlight>" : " (colon)</highlight> after every property name and <highlight>" ; " (semicolon)</highlight> after a property value. Forgetting to put that may cause the Text Element's style to not display properly.</text>
+		</div>
+
+        <div style="margin-bottom: 30px;" id="editing-references">
+			<text style="font-size: 20px;">Adding References <highlight style="font-size: 10px;">#editing-references</highlight></text><br>
+            <text>Now that we have the basics of editing a <a href="#editing-text">Text Element (click me!!)</a>, let's talk about references!</text><br><br>
+            <text>References is a way to <highlight>Reference something that is on another page</highlight>, its something that adds information to the reader, like if they don't know what <a href="https://cdn.discordapp.com/attachments/576624810679992330/1179062227467255898/1efe3a0bae41467a5c01df7bd85ce5c1.png?ex=65786a44&is=6565f544&hm=9452ca80baa18bea13571b984264f37fe374cb4693f3ce4847771dd2b2ccd282&">the smurf cat</a> looks like, you can use a reference to link them to the Wiki Page.</text><br><br>
+            <text>BUT WAIT!!! let's not go too crazy on references, like linking the user somewhere else not on this domain. as it can be against the editing rules, but it's done if necessary.</text><br><br>
+            
+			<text>To add a reference from a Text Element, we can add this <highlight>Anchor Element</highlight> anywhere inside any <highlight>Text Element</highlight> to add a reference.</text><br><br>
+
+			<div class="container">
+				<text style="white-space: pre-wrap;">
+					&lt;a href="/amoung-us"&gt;reference to among us&lt;/a&gt;
+				</text>
+			</div><br>
+
+			<text>Something like this:</text><br><br>
+
+			<div class="container">
+				<text style="white-space: pre-wrap;">
+					&lt;text&gt;heres a <highlight>&lt;a href="/among-us"&gt;reference to among us&lt;/a&gt;</highlight>. a hit game by NobleReign&lt;/text&gt;
+				</text>
+			</div><br>
+
+			<text>The <highlight>Hypertext Reference (href) attribute</highlight> can be different depending on what you're referencing, it can be either:</text><br><br>
+
+			<text>Referencing something on the page the user is in:</text><br><br>
+
+			<div class="container">
+				<text style="white-space: pre-wrap;">
+					&lt;text&gt;&lt;a <highlight>href="#page-section-reference"</highlight>&gt;Reference Title&lt;/a&gt;&lt;/text&gt;
+				</text>
+			</div><br>
+
+			<text>Referencing something outside the page the user is in:</text><br><br>
+
+			<div class="container">
+				<text style="white-space: pre-wrap;">
+					&lt;text&gt;&lt;a <highlight>href="/route-reference"</highlight>&gt;Title&lt;/a&gt;&lt;/text&gt;
+				</text>
+			</div><br>
+
+			<text>Referencing something outside the page the user is in linking to the reference you're specifically talking about:</text><br><br>
+
+			<div class="container">
+				<text style="white-space: pre-wrap;">
+					&lt;text&gt;&lt;a <highlight>href="/route-reference#page-section-reference"</highlight>&gt;Title&lt;/a&gt;&lt;/text&gt;
+				</text>
+			</div><br>
+
+			<text>Referencing something off-site:</text><br><br>
+
+			<div class="container">
+				<text style="white-space: pre-wrap;">
+					&lt;text&gt;&lt;a <highlight>href="https://wolfdo.gg/offsite/reference"</highlight>&gt;Title&lt;/a&gt;&lt;/text&gt;
+				</text>
+			</div><br>
+
+			<text>Referencing something off-site linking to the reference you're specifically talking about:</text><br><br>
+
+			<div class="container">
+				<text style="white-space: pre-wrap;">
+					&lt;text&gt;&lt;a <highlight>href="https://wolfdo.gg/offsite/reference#page-section-reference"</highlight>&gt;Title&lt;/a&gt;&lt;/text&gt;
+				</text>
+			</div><br>
 		</div>
 
     </div>
