@@ -1,0 +1,113 @@
+body {
+    margin: 0;
+    min-height: 100vh;
+    background-color: #044354;
+}
+
+body::-webkit-scrollbar {
+    width: 0em;
+    background-color: transparent;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: transparent;
+}
+
+body::-webkit-scrollbar-track {
+    -webkit-box-shadow: none;
+    background-color: transparent;
+}
+
+@font-face {
+    font-family: 'Starbound';
+    src: url('https://raw.githubusercontent.com/Bus-Simulator/wiki/main/assets/fonts/Starbound.ttf');
+}
+
+
+text {
+    font-family:'Starbound';
+    color: white;
+    word-spacing: 5px;
+    text-shadow: 0 2px 0 #000000;
+}
+
+div.sidebar {
+    height: calc(100% - 10px);
+    width: 50px; position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #0991b6;
+    padding: 5px;
+    color: white;
+}
+
+div.sidebar button {
+    font-family:'Starbound';
+    background-color: #2095b6;
+    backdrop-filter: blur(5px);
+
+    width: 50px;
+    height: 32px;
+    border: none;
+    transition: 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden;
+    margin-bottom: 5px;
+}
+
+div.sidebar button[type="menuBack"] {
+    background-color: #eb4034;
+}
+
+div.sidebar button:hover[type="menuBack"] {
+    background-color: #eb403480;
+}
+
+div.sidebar button:hover {
+    width: 250px;
+    cursor: pointer;
+    color: white;
+    background-color: #2095b680;
+}
+
+div.sidebar button text[type="hoverText"] {
+    opacity: 0;
+    margin-top: 3px;
+    transition: opacity 0.2s;
+}
+
+div.sidebar button:hover text[type="hoverText"] {
+    opacity: 1;
+}
+
+div.sidebar bottomButtons {
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+div.container {
+    margin-bottom: 5px;
+    background-color: #070446;
+    width: calc(100% - 10px);
+    padding: 5px;
+    transition: 500ms;
+}
+
+a {
+    font-family: 'Starbound';
+    cursor: pointer;
+    color: #eb4034;
+    text-decoration: none;
+}
+
+a:visited {
+    color: #eb4034;
+}
+
+a:hover {
+    color: #c2352b;
+}
