@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="The community-managed Bus Simulator Wiki!">
+    <meta name="keywords" content="roblox bus simulator, roblox bus simulator wiki">
+
+    <title>Learn the Basics of Editing - Bus Simulator Community Wiki</title>
+
+    <link rel="icon" href="/home-assets/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/home-assets/style.css">
+</head>
+<body>
+    <div id="sidebar" class="sidebar">
+        <script>
+            var activeMenu = "mainMenu";
+
+            function navigateMenu(menuId) {
+                var menus = document.querySelectorAll('.sidebarMenu');
+                menus.forEach(function(menu) {
+                    menu.style.display = 'none';
+                });
+            
+                var selectedMenu = document.getElementById(menuId);
+                if (selectedMenu) {
+                    selectedMenu.style.display = 'block';
+                    activeMenu = menuId;
+                }
+            }
+
+            navigateMenu(activeMenu);
+        </script>
+        
+        <script id="sidebarLoader">
+            fetch('/home/sidebar')
+            .then(response => response.text())
+            .then(html => {
+                document.getElementById('sidebar').innerHTML = html;
+            })
+            .catch(error => console.error('Error fetching HTML:', error));
+        </script>
+    </div>
+
+    <div style="margin-left: 60px; padding: 15px; min-height: calc(100vh - 30px);">
+        <div style="margin-bottom: 30px;">
+            <text style="font-size: 30px;">Editing: Learn the Basics</text><br>
+            <text>Welcome, future contributor! This is the <highlight>Part 1</highlight> of the Editing Guide. This part introduces some basic understanding on how to edit a Wiki Page with HTML, including how to properly create sections, and other stuff.</text>
+        </div>
+
+        <div style="margin-bottom: 30px;">
+            <text style="font-size: 20px;">Before we start...</text><br>
+            <text>An <highlight>Github Account</highlight> is required in order to contribute changes/save wiki changes via <highlight>Pull Requesting</highlight>.</text>
+        </div>
+
+        <div style="margin-bottom: 30px;">
+            <text style="font-size: 20px;">Types of Editing</text><br>
+            <text>There are <highlight>two types of editing</highlight> you can use to edit the wiki. It can be <highlight>Local Editing</highlight> or <highlight>Online Editing</highlight></text><br><br>
+            <text><highlight>Local Editing</highlight> is the best option you can use to edit the wiki quickly, with that requiring you to install <a href="https://code.visualstudio.com/download">Visual Studio Code (/download, ~90MB)</a>, <a href="https://www.python.org/downloads/">Python (/downloads, ~25MB)</a> (and 2 pip libraries) and <a href="https://git-scm.com/downloads">git (/downloads ~58MB)</a>.</text><br><br>
+            <text><highlight>Online Editing</highlight> is not the best, although good if you dont want to install ~173MB of programs. The online editor can be accessed here: <a href="https://vscode.dev">vscode.dev</a>.</text><br><br>
+            <text>For this entire guide, We will be <highlight>Locally Editing</highlight> the wiki we want to contribute from!</text>
+        </div>
+
+        <div style="margin-bottom: 30px;">
+            <text style="font-size: 20px;">Preparing the Programs</text><br>
+            <text>Okay, assuming that you have all of the programs installed on your <highlight>Downloads</highlight> folder. I'll walk you though the process on how to properly install those programs.</text>
+        </div>
+    </div>
+</body>
+</html>

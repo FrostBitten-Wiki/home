@@ -20,7 +20,7 @@ body::-webkit-scrollbar-track {
 
 @font-face {
     font-family: 'Starbound';
-    src: url('https://raw.githubusercontent.com/Bus-Simulator/wiki/main/assets/fonts/Starbound.ttf');
+    src: url('https://frostbitten-wiki.github.io/bussim/assets/fonts/Starbound.ttf');
 }
 
 
@@ -29,6 +29,10 @@ text {
     color: white;
     word-spacing: 5px;
     text-shadow: 0 2px 0 #000000;
+}
+
+highlight {
+    color: #eb4034;
 }
 
 div.sidebar {
@@ -91,7 +95,7 @@ div.sidebar bottomButtons {
 
 div.container {
     margin-bottom: 5px;
-    background-color: #070446;
+    background-color: #054759;
     width: calc(100% - 10px);
     padding: 5px;
     transition: 500ms;

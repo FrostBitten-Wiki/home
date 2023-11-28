@@ -33,7 +33,7 @@
         </script>
         
         <script id="sidebarLoader">
-            fetch('/bussim/sidebar')
+            fetch('/home/sidebar')
             .then(response => response.text())
             .then(html => {
                 document.getElementById('sidebar').innerHTML = html;
@@ -75,7 +75,7 @@
             <div style="margin-bottom: 20px;">
                 {% if guideLinks %}
                     {% for data in guideLinks %}
-                    <div class="container" style="cursor: pointer;" onclick="location.href='/bussim/editing/{{ data[0] }}'">
+                    <div class="container" style="cursor: pointer;" onclick="location.href='/home/editing/{{ data[0] }}'">
                         <div style="padding: 5px;">
                             <text style="font-size: 25px;">{{ data[1] }}</text><br>
                             <text>{{ data[2] }}</text>
