@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="The community-managed Bus Simulator Wiki!">
+    <meta name="description" content="The Part 1 of the Editing Guide by @nyxical">
     <meta name="keywords" content="roblox bus simulator, roblox bus simulator wiki">
 
     <title>Learn the Basics of Editing - Bus Simulator Community Wiki</title>
@@ -124,10 +124,6 @@
             <text>Install <highlight>Python</highlight>, make sure to add it to PATH. There should be a button somewhere (or in the end of installation).</text><br>
             <text>Install <highlight>git</highlight>. on the 4th page, <highlight>Override the default branch name for new repositories</highlight> as "main".</text><br><br>
             
-            <text>After installing <highlight>Python</highlight>, you need to install the 2 libraries: fastapi and uvicorn</text><br><br>
-            
-            <text>In <highlight>Windows</highlight>, you can open up a new terminal by pressing <highlight>Windows Key + R</highlight>, type "cmd.exe", press enter and type the command: <highlight type="rainbow">pip install uvicorn fastapi</highlight></text><br><br>
-            <text>In <highlight>Linux</highlight>... I don't think i even need to tell you how. If you don't know, i dont even know why you have linux.</text><br><br>
             <text>Aaaaanddd... that's all!</text>
         </div>
 
@@ -138,13 +134,40 @@
             <text>except some templates you can edit from so you can start doing whatever you want or just follow this entire guide.</text><br><br>
 
             <text>Now that you've cloned the <highlight>Dummy Wiki</highlight>, you can now open <highlight>Visual Studio Code</highlight>, and press <highlight>CTRL + SHIFT + `</highlight> to open up a new terminal and type in the following commands:</text><br><br>
-            <text><highlight type="rainbow">git config --global user.name "YourGithubName"</highlight></text><br>
-            <text><highlight type="rainbow">git config --global user.email "youremail@example.com"</highlight></text><br>
-            <text><highlight type="rainbow">git clone https://github.com/[your_githubname]/dummy.git . && git pull</highlight></text><br><br>
+            
+			<div class="container">
+				<text style="white-space: pre;">
+					git config --global user.name "YourGithubName"
+					git config --global user.email "youremail@example.com"
+					git clone https://github.com/[your_githubname]/dummy.git . && git pull
+				</text>
+			</div><br>
+			
+            <text>Before we start editing, we must install 2 pip libraries before we run <highlight type="rainbow">main.py</highlight> type the following command on the terminal:<br><br>
 
-            <text>Before we start editing, we must install 2 pip libraries before we run <highlight type="rainbow">main.py</highlight> type the following command on the terminal: <highlight type="rainbow">pip install fastapi uvicorn</highlight></text><br><br>
-            <text>Now that you have those two pip libraries installed, you can now run <highlight type="rainbow">main.py</highlight> by typing the following command on the terminal: <highlight type="rainbow">python main.py</highlight> (<highlight type="rainbow">python3</highlight> for <highlight>Linux</highlight>)</text><br><br>
-            <text>Alright... now that everything is almost setup, we can actually start editing!!</text>
+			<div class="container">
+				<text style="white-space: pre;">
+					pip install fastapi uvicorn
+				</text>
+			</div><br>
+
+            <text>Now that you have those two pip libraries installed, you can now run <highlight type="rainbow">main.py</highlight> by typing the following command on the terminal:</text><br><br>
+            
+			<div class="container">
+				<text style="white-space: pre;">
+					python main.py
+				</text>
+			</div><br>
+
+			<text>For <highlight>Linux</highlight> computers:</text><br><br>
+
+			<div class="container">
+				<text style="white-space: pre;">
+					python3 main.py
+				</text>
+			</div><br>
+
+			<text>Alright... now that everything is almost setup, we can actually start editing!!</text>
         </div>
 
         <div style="margin-bottom: 30px;" id="editing">
@@ -153,9 +176,9 @@
 
 			<div class="container">
 				<text style="white-space: pre;">
-				&lt;div style="margin-bottom: 20px;"&gt;
-				&Tab;&Tab;&lt;text style="font-size: 35px;"><highlight>XD</highlight>&lt;/text&gt;
-				&lt;/div&gt;
+					&lt;div style="margin-bottom: 20px;"&gt;
+					&Tab;&Tab;&lt;text style="font-size: 35px;"><highlight>XD</highlight>&lt;/text&gt;
+					&lt;/div&gt;
 				</text>
 			</div><br><br>
 
@@ -164,9 +187,9 @@
 			
 			<div class="container">
 				<text style="white-space: pre;">
-				&lt;div style="margin-bottom: 20px;"&gt;
-				&Tab;&Tab;&lt;text <highlight>style="font-size: 50px;"</highlight>>XD&lt;/text&gt;
-				&lt;/div&gt;
+					&lt;div style="margin-bottom: 20px;"&gt;
+					&Tab;&Tab;&lt;text <highlight>style="font-size: 50px;"</highlight>>XD&lt;/text&gt;
+					&lt;/div&gt;
 				</text>
 			</div><br>
 
@@ -197,8 +220,7 @@
 			</div><br><br>
 
 			<text>Oh yeah, when editing the style value, it's very important that you don't forget <highlight>" : " (colon)</highlight> after every property name and <highlight>" ; " (semicolon)</highlight> after a property value. Forgetting to put that may cause the Text Element's style to not display properly.</text><br><br>
-
-        </div>
+		</div>
 
     </div>
 </body>
