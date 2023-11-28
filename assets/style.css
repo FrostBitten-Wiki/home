@@ -101,6 +101,14 @@ div.container {
     transition: 500ms;
 }
 
+code {
+    font-family: 'Starbound';
+    display: block;
+    background-color: #054759;
+    color: white;
+    padding: 5px;
+  }
+
 a {
     font-family: 'Starbound';
     cursor: pointer;

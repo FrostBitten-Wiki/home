@@ -10,6 +10,62 @@
 
     <link rel="icon" href="/home-assets/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="/home-assets/style.css">
+
+    <style>
+        highlight[type="rainbow"] {
+          display: inline-block;
+          color: transparent;
+          background-clip: text;
+          animation: rainbowAnimation 10s infinite linear;
+        }
+    
+        @keyframes rainbowAnimation {
+            0% {
+              color: #ff0000;
+            }
+            16.666% {
+              color: #ff8000;
+            }
+            33.333% {
+              color: #ffff00;
+            }
+            50% {
+              color: #00ff00;
+            }
+            66.666% {
+              color: #0000ff;
+            }
+            83.333% {
+              color: #8000ff;
+            }
+            100% {
+              color: #ff0000;
+            }
+        }
+
+        @keyframes floatUpDown {
+            0%, 100% {
+              transform: translateY(0);
+            }
+            50% {
+              transform: translateY(-5px);
+            }
+        }
+
+        float {
+            display: inline-block;
+            font-size: 24px;
+            word-spacing: -5px;
+        }
+
+        float text {
+            color: grey;
+            font-size: 16px;
+            display: inline-block;
+            animation: floatUpDown 1s ease-in-out infinite alternate;
+            animation-delay: var(--delay);
+        }
+      </style>
 </head>
 <body>
     <div id="sidebar" class="sidebar">
@@ -53,18 +109,97 @@
             <text>An <highlight>Github Account</highlight> is required in order to contribute changes/save wiki changes via <highlight>Pull Requesting</highlight>.</text>
         </div>
 
-        <div style="margin-bottom: 30px;">
-            <text style="font-size: 20px;">Types of Editing</text><br>
+        <div style="margin-bottom: 30px;" id="types-of-editing">
+            <text style="font-size: 20px;">Types of Editing <highlight style="font-size: 10px;">#types-of-editing</highlight></text><br>
             <text>There are <highlight>two types of editing</highlight> you can use to edit the wiki. It can be <highlight>Local Editing</highlight> or <highlight>Online Editing</highlight></text><br><br>
             <text><highlight>Local Editing</highlight> is the best option you can use to edit the wiki quickly, with that requiring you to install <a href="https://code.visualstudio.com/download">Visual Studio Code (/download, ~90MB)</a>, <a href="https://www.python.org/downloads/">Python (/downloads, ~25MB)</a> (and 2 pip libraries) and <a href="https://git-scm.com/downloads">git (/downloads ~58MB)</a>.</text><br><br>
             <text><highlight>Online Editing</highlight> is not the best, although good if you dont want to install ~173MB of programs. The online editor can be accessed here: <a href="https://vscode.dev">vscode.dev</a>.</text><br><br>
-            <text>For this entire guide, We will be <highlight>Locally Editing</highlight> the wiki we want to contribute from!</text>
+            <text>For this entire guide, We will be <highlight>Locally Editing</highlight> the wiki we want to create edits from!</text>
         </div>
 
-        <div style="margin-bottom: 30px;">
-            <text style="font-size: 20px;">Preparing the Programs</text><br>
-            <text>Okay, assuming that you have all of the programs installed on your <highlight>Downloads</highlight> folder. I'll walk you though the process on how to properly install those programs.</text>
+        <div style="margin-bottom: 30px;" id="preparation">
+            <text style="font-size: 20px;">Preparing the Programs <highlight style="font-size: 10px;">#preparation</highlight></text><br>
+            <text>Okay, assuming that you have all of the programs installed on your <highlight>Downloads</highlight> folder. Follow the stuff below:</text><br><br>
+            <text>Install <highlight>Visual Studio Code</highlight> normally.</text><br>
+            <text>Install <highlight>Python</highlight>, make sure to add it to PATH. There should be a button somewhere (or in the end of installation).</text><br>
+            <text>Install <highlight>git</highlight>. on the 4th page, <highlight>Override the default branch name for new repositories</highlight> as "main".</text><br><br>
+            
+            <text>After installing <highlight>Python</highlight>, you need to install the 2 libraries: fastapi and uvicorn</text><br><br>
+            
+            <text>In <highlight>Windows</highlight>, you can open up a new terminal by pressing <highlight>Windows Key + R</highlight>, type "cmd.exe", press enter and type the command: <highlight type="rainbow">pip install uvicorn fastapi</highlight></text><br><br>
+            <text>In <highlight>Linux</highlight>... I don't think i even need to tell you how. If you don't know, i dont even know why you have linux.</text><br><br>
+            <text>Aaaaanddd... that's all!</text>
         </div>
+
+        <div style="margin-bottom: 30px;" id="setup-vsc">
+            <text style="font-size: 20px;">Setting up Visual Studio Code <highlight style="font-size: 10px;">#setup-vsc</highlight></text><br>
+            <text>Before we setup <highlight>Visual Studio Code</highlight>, you must fork a Wiki Repository first. We will be forking the <a href="https://github.com/FrostBitten-Wiki/dummy/fork">Dummy Wiki (click to fork)</a>. The dummy wiki contains almost</text>
+            <float><text style="--delay: 0s;">a</text><text style="--delay: 0.1s;">b</text><text style="--delay: 0.2s;">s</text><text style="--delay: 0.3s;">o</text><text style="--delay: 0.4s;">l</text><text style="--delay: 0.5s;">u</text><text style="--delay: 0.6s;">t</text><text style="--delay: 0.7s;">e</text><text style="--delay: 0.8s;">l</text><text style="--delay: 0.9s;">y</text><text style="--delay: 1s;">&nbsp;</text><text style="--delay: 1.1s;">n</text><text style="--delay: 1.2s;">o</text><text style="--delay: 1.3s;">t</text><text style="--delay: 1.4s;">h</text><text style="--delay: 1.5s;">i</text><text style="--delay: 1.6s;">n</text><text style="--delay: 1.7s;">g</text><text style="--delay: 1.8s;">.</text><text style="--delay: 1.9s;">.</text><text style="--delay: 2s;">.</text></float>
+            <text>except some templates you can edit from so you can start doing whatever you want or just follow this entire guide.</text><br><br>
+
+            <text>Now that you've cloned the <highlight>Dummy Wiki</highlight>, you can now open <highlight>Visual Studio Code</highlight>, and press <highlight>CTRL + SHIFT + `</highlight> to open up a new terminal and type in the following commands:</text><br><br>
+            <text><highlight type="rainbow">git config --global user.name "YourGithubName"</highlight></text><br>
+            <text><highlight type="rainbow">git config --global user.email "youremail@example.com"</highlight></text><br>
+            <text><highlight type="rainbow">git clone https://github.com/[your_githubname]/dummy.git . && git pull</highlight></text><br><br>
+
+            <text>Before we start editing, we must install 2 pip libraries before we run <highlight type="rainbow">main.py</highlight> type the following command on the terminal: <highlight type="rainbow">pip install fastapi uvicorn</highlight></text><br><br>
+            <text>Now that you have those two pip libraries installed, you can now run <highlight type="rainbow">main.py</highlight> by typing the following command on the terminal: <highlight type="rainbow">python main.py</highlight> (<highlight type="rainbow">python3</highlight> for <highlight>Linux</highlight>)</text><br><br>
+            <text>Alright... now that everything is almost setup, we can actually start editing!!</text>
+        </div>
+
+        <div style="margin-bottom: 30px;" id="editing">
+            <text style="font-size: 20px;">Now, the Editing part!! <highlight style="font-size: 10px;">#editing-1</highlight></text><br>
+            <text>To start editing, let's open up a file we want. For example, let's open up <highlight>home.html</highlight>. and edit our first <highlight>Text Element</highlight>.</text><br><br>
+
+			<div class="container">
+				<text style="white-space: pre;">
+				&lt;div style="margin-bottom: 20px;"&gt;
+				&Tab;&Tab;&lt;text style="font-size: 35px;"><highlight>XD</highlight>&lt;/text&gt;
+				&lt;/div&gt;
+				</text>
+			</div><br><br>
+
+			<text>Try editing that XD text between > and < to something else from the <highlight>home.html</highlight> file, then visit this localhost page <a href="http://localhost/dummy">http://localhost/dummy</a> to see if the text changed to something else!</text><br><br>
+			<text>You can also edit the font size style to something else, like <highlight>50px</highlight>, or <highlight>69%</highlight>!</text><br><br>
+			
+			<div class="container">
+				<text style="white-space: pre;">
+				&lt;div style="margin-bottom: 20px;"&gt;
+				&Tab;&Tab;&lt;text <highlight>style="font-size: 50px;"</highlight>>XD&lt;/text&gt;
+				&lt;/div&gt;
+				</text>
+			</div><br>
+
+			<div class="container">
+				<text style="white-space: pre;">
+				&lt;div style="margin-bottom: 20px;"&gt;
+				&Tab;&Tab;&lt;text <highlight>style="font-size: 69%;"</highlight>>XD&lt;/text&gt;
+				&lt;/div&gt;
+				</text>
+			</div><br><br>
+
+			<text>You can also change it's color to something else, the color value can be <highlight type="rainbow">Hex Values ( #696969 )</highlight>, <highlight type="rainbow">RGB ( rgb(69, 69, 69) )</highlight> and more!</text><br><br>
+
+			<div class="container">
+				<text style="white-space: pre;">
+				&lt;div style="margin-bottom: 20px;"&gt;
+				&Tab;&Tab;&lt;text style="<highlight>color: #696969;</highlight> font-size: 69%;">XD&lt;/text&gt;
+				&lt;/div&gt;
+				</text>
+			</div><br>
+
+			<div class="container">
+				<text style="white-space: pre;">
+				&lt;div style="margin-bottom: 20px;"&gt;
+				&Tab;&Tab;&lt;text style="<highlight>color: rgb(69, 69, 69);</highlight> font-size: 69%;">XD&lt;/text&gt;
+				&lt;/div&gt;
+				</text>
+			</div><br><br>
+
+			<text>Oh yeah, when editing the style value, it's very important that you don't forget <highlight>" : " (colon)</highlight> after every property name and <highlight>" ; " (semicolon)</highlight> after a property value. Forgetting to put that may cause the Text Element's style to not display properly.</text><br><br>
+
+        </div>
+
     </div>
 </body>
 </html>
